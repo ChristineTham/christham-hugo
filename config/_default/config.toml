@@ -1,11 +1,11 @@
-baseurl = "https://doks.netlify.app/"
+baseurl = "https://christinetham.github.io/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
 enableEmoji = true
 enableGitInfo = false
 enableRobotsTXT = true
-languageCode = "en-US"
+languageCode = "en-AU"
 paginate = 7
 rssLimit = 10
 
