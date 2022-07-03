@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://christinetham.github.io/sitemap.xml
