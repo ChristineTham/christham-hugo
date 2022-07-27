@@ -10,7 +10,6 @@ type: docs
 menu:
   docs:
     parent: "background"
-location: 36.668333, 116.997222
 ---
 
 ![Tan surname](Tan_name.png)
@@ -34,6 +33,8 @@ According to [Wikipedia](https://en.wikipedia.org/wiki/Tan_(surname)), it is the
 The earliest known Tan is King Tan (Tan Gong 谭公) who appeared in the Book of Odes [Shih-ching](https://en.wikipedia.org/wiki/Classic_of_Poetry). He ruled over the State of Sung (Sung kuo 宋國), married Zhuang Jiang (庄姜) and was appointed a Viscount in the Zhou (周) Dynasty. The surname Tan became a hereditary surname to be passed down to descendants. He also became known as Tan Zi.
 
 King Tan established the Tan Kingdom, which was situated in the current Shandong Province Ji Nan (山东省济南) (Li City) (历城), 70 miles east South of Long Shan Township (龙山镇). That is about 2 miles east/north of the Long Shan Station of the Jiao Ji Railway Line (龙山胶济铁路). It is also name as Dong Ping Ling District (东平陵县) or Ping Ling District (平陵县). It was pronounced as a Royal Kingdom by Han Wen Di (汉文帝) after ruling it for 16 years.
+
+{{< openstreetmap latitude="36.668333" longitude="116.997222" zoom="10" >}}
 
 However, the Kingdom was abolished when Tai Zong Zhen Guang from the State of Chü (齊國) defeated the Tan state. The descendants of the Tan family fled, mainly to the provinces of Guangdong and He Nan. The writing of the surname was also changed from 談 to 譚 to avoid pursuit by enemies.
 
@@ -67,4 +68,4 @@ According to [*In Search of Your Asian Roots: Genealogical Research on Chinese S
 
 [^1]: The earliest study on the origin of Chinese surnames. The work is arranged according to the rhyme of the names and the major emphasis of the book is placed on the surnames which were most common during the T'ang dynasty. It is a study of particular importance for students and scholars of that period. For reference and scholarly use. There may be typographical and historical errors in these extracts.
 
-For more information, please refer to [History of the Tam's Clansmen](http://tamhistory.blogspot.com/)
+For more information, please refer to [History of the Tam's Clansmen](http://tamhistory.blogspot.com/).

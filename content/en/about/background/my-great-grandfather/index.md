@@ -20,6 +20,8 @@ I am greatly indebted to the [森美蘭譚氏聯宗會 The N.S. Tham Clansmen As
 
 ![Tham Yong](thamyong.jpg)
 
+## Epitaph
+
 The following is taken from an epitaph erected by The N.S. Tham Clansmen Association:
 
 ![Epitaph](DSCF2508.jpg)
@@ -40,6 +42,12 @@ The following is taken from an epitaph erected by The N.S. Tham Clansmen Associa
 >The N.S. Tham Clansmen Association
 >The Tham Clansmen Association of Malaysia
 >On 2nd May 1999
+
+## Jalan Kapitan Tam Yeong
+
+Today, there is a street named after my great grandfather. Jalan Kapitan Tam Yeong is a road on the northern part of downtown Seremban. It connects Jalan Tun Dr Ismail to Jalan Leftenan Adnan. In between, it also forms junctions with Jalan Dato Bandar Tunggal, Jalan Seng Meng Lee and Jalan Yam Tuan.
+
+{{< openstreetmap latitude="2.72986" longitude="101.93829" zoom="18" >}}
 
 This watercolour painting of Japan Kapitan Tam Yeong is by [Azman Nor](https://azmannor.com)
 

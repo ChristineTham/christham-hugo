@@ -1,0 +1,17 @@
+<div id="map" class="mb-3"></div>
+<style>
+#map { height: 400px; }
+</style>
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+  integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+  crossorigin=""></script>
+<script>
+  var loc = [{{- float (.Get "latitude") -}}, {{- float (.Get "longitude") -}}];
+  var zoom = {{- int (.Get "zoom") -}};
+  var map = L.map('map').setView(loc, zoom);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© OpenStreetMap'
+  }).addTo(map);
+  var marker = L.marker(loc).addTo(map);
+</script>
