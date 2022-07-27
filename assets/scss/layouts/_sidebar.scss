@@ -22,17 +22,17 @@
 .docs-links:hover,
 .docs-toc:hover {
   scrollbar-width: thin;
-  scrollbar-color: $gray-200 $white;
+  scrollbar-color: $rosely6 $white;
 }
 
 .docs-links:hover::-webkit-scrollbar-thumb,
 .docs-toc:hover::-webkit-scrollbar-thumb {
-  background: $gray-200;
+  background: $rosely6;
 }
 
 .docs-links::-webkit-scrollbar-thumb:hover,
 .docs-toc::-webkit-scrollbar-thumb:hover {
-  background: $gray-200;
+  background: $rosely6;
 }
 
 .docs-links h3,

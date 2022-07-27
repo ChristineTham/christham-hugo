@@ -1,6 +1,6 @@
 details {
   display: block;
-  border: 1px solid $gray-200;
+  border: 1px solid $roselyb;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem 0;
   margin: 0.5rem 0;
@@ -27,7 +27,7 @@ summary::-webkit-details-marker {
 }
 
 summary:hover {
-  background: $gray-100;
+  background: $rosely7;
 }
 
 details summary::before {

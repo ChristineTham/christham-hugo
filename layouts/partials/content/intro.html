@@ -1,23 +1,24 @@
+
 <!--Section: Content-->
 <section>
-  <div class="row">
-    <div class="col-md-6 gx-5 mb-4">
-      <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-bs-ripple-color="light">
+  <div class="container-fluid col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
         {{ $image := resources.Get "images/me/Mercure Centro (2).jpeg" }}
-        <img src="{{ $image.RelPermalink }}" class="img-fluid" />
-        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+        <img src="{{ $image.RelPermalink }}" class="d-block mx-lg-auto img-fluid" alt="Photo of me" loading="lazy" />
       </div>
-    </div>
-
-    <div class="col-md-6 gx-5 mb-4">
-      <h4><strong>Welcome to my personal web site</strong></h4>
-      <p class="text-muted">
-        Hello world!
-      </p>
-      <p><strong>artist, consultant, cyclist, designer, musician, photographer, world traveller.</strong></p>
-      <p class="text-muted">
-        Here you can find various articles pertaining to my life and interests, as well as links to other websites created by me.
-      </p>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Hello world!</h1>
+        <p class="lead">Welcome to my personal web site</p>
+        <p class="lead"><i>artist, consultant, cyclist, designer, musician, photographer, world traveller</i></p>
+        <p class="text-muted">
+          Here you can find various articles pertaining to my life and interests, as well as links to other websites created by me.
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">About Me</button>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4">Blog</button>
+        </div>
+      </div>
     </div>
   </div>
 </section>

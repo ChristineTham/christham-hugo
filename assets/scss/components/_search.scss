@@ -31,12 +31,12 @@
 }
 
 #suggestions a:focus {
-  background: $gray-100;
+  background: $rosely6;
   outline: 0;
 }
 
 #suggestions div:not(:first-child) {
-  border-top: 1px dashed $gray-200;
+  border-top: 1px dashed $roselyb;
 }
 
 #suggestions div:first-child {
@@ -48,7 +48,7 @@
 }
 
 #suggestions a:hover {
-  background: $gray-100;
+  background: $rosely7;
 }
 
 #suggestions span {
@@ -58,12 +58,12 @@
 
 .suggestion__title {
   font-weight: $headings-font-weight;
-  color: $black;
+  color: $rosely8;
 }
 
 .suggestion__description,
 .suggestion__no-results {
-  color: $gray-700;
+  color: $rosely1;
 }
 
 @include media-breakpoint-up(lg) {
@@ -79,7 +79,7 @@
   .suggestion__title {
     width: 9rem;
     padding-right: 1rem;
-    border-right: 1px solid $gray-200;
+    border-right: 1px solid $roselyb;
     display: inline-block;
     text-align: right;
   }
