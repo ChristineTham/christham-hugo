@@ -1,6 +1,6 @@
 ---
 title: Sunday Dose Breakfast
-subtitle: (Not) post ride breakfast with Zeal of Zebras
+description: (Not) post ride breakfast with Zeal of Zebras
 categories: [cycling]
 tags: [Zeal, breakfast, Dose]
 date: 2020-11-04T09:19:42+01:00

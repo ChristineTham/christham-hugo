@@ -6,7 +6,7 @@ enableEmoji = true
 enableGitInfo = false
 enableRobotsTXT = true
 languageCode = "en-AU"
-paginate = 7
+paginate = 12
 rssLimit = 10
 
 # Multilingual

@@ -48,8 +48,8 @@ themeColor = "#fff"
 # Images
 quality = 85
 bgColor = "#fff"
-landscapePhotoWidths = [900, 800, 700, 600, 500]
-portraitPhotoWidths = [800, 700, 600, 500]
+landscapePhotoWidths = [2048, 1600, 1280, 1080, 720, 480]
+portraitPhotoWidths = [1280, 1080, 720, 480]
 lqipWidth = "20x"
 smallLimit = "300"
 
@@ -65,7 +65,7 @@ defaultImage = "default-image.png" # put in `./assets/images/`
 fillImage = "1270x740 Center" # normalize image size
 
 # Footer
-footer = "Powered by <a class=\"text-muted\" href=\"https://pages.github.com/\">Github Pages</a>, <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
+footer = "Copyright (c) 2022 Christine Tham"
 
 # Feed
 copyRight = "Copyright (c) 2022 Christine Tham"
@@ -87,7 +87,7 @@ editPage = false
 lastMod = false
 
 [sections]
-  sectionNav = ["docs", "guides"]
+  sectionNav = ["docs", "blog"]
 
 [options]
   lazySizes = true
@@ -95,7 +95,7 @@ lastMod = false
   instantPage = true
   flexSearch = true
   searchSectionsShow = []
-  searchSectionsIndex = []
+  searchSectionsIndex = ["docs", "blog"]
   darkMode = true
   bootStrapJs = true
   breadCrumb = true

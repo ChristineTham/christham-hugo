@@ -1,24 +1,24 @@
 {{ define "main" }}
-<div class="row justify-content-center">
-  <div class="col-md-10 col-lg-8 col-xl-6">
-    <article>
-      <h1 class="text-center">{{ .Title }}</h1>
-      <div class="text-center">{{ .Content }}</div>
-			<div class="card-list">
-				{{ $paginator := .Paginate (.Data.Pages) -}}
-				{{ range $paginator.Pages -}}
-					<div class="card">
-						<div class="card-body">
-							<h2 class="h3"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
-							<p>{{ .Params.lead | safeHTML }}</p>
-							{{ partial "main/blog-meta.html" . -}}
-						</div>
-					</div>
-				{{ end -}}
-				{{ $.Scratch.Set "paginator" true }}
-				{{ template "_internal/pagination.html" . }}
-			</div>
-    </article>
+<article>
+  <h1 class="text-center">{{ .Title }}</h1>
+  <div class="text-center">{{ .Content }}</div>
+  <div class="row">
+    {{ $paginator := .Paginate (.Data.Pages) -}}
+    {{ range $paginator.Pages -}}
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="card">
+          {{- .Scratch.Set "fillImageCard" "600x400 Center" -}}
+          {{ partial "content/card-image.html" . }}
+          <div class="card-body">
+            <h2 class="h5 card-title"><a class="stretched-link" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
+            <p class="card-text">{{ .Params.description | safeHTML }}</p>
+          </div>
+          <div class="card-footer">{{ partial "main/blog-meta.html" . -}}</div>
+        </div>
+      </div>
+    {{ end -}}
+    {{ $.Scratch.Set "paginator" true }}
+    {{ template "_internal/pagination.html" . }}
   </div>
-</div>
+</article>
 {{ end }}

@@ -9,7 +9,7 @@
 {{ end -}}
 
 {{ $webp := printf "%s%s" $fillImage " webp" }}
-{{ $image = $image.Resize $webp}}
+{{ $image = $image.Fill $webp}}
 
 {{ $lqip := $image.Resize site.Params.lqipWidth -}}
 
