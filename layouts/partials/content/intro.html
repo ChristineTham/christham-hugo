@@ -5,7 +5,7 @@
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
         {{ $image := resources.Get "images/me/Mercure Centro (2).jpeg" }}
-        <img src="{{ $image.RelPermalink }}" class="d-block mx-lg-auto img-fluid" alt="Photo of me" loading="lazy" />
+        <img src="{{ $image.RelPermalink }}" class="d-block mx-lg-auto img-fluid rounded-3" alt="Photo of me" loading="lazy" />
       </div>
       <div class="col-lg-6">
         <h1 class="display-5 fw-bold lh-1 mb-3">Hello world!</h1>
@@ -15,8 +15,8 @@
           Here you can find various articles pertaining to my life and interests, as well as links to other websites created by me.
         </p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">About Me</button>
-          <button type="button" class="btn btn-outline-secondary btn-lg px-4">Blog</button>
+          <a href="/about/background/introduction"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2">About Me</button></a>
+          <a href="/blog"><button type="button" class="btn btn-outline-secondary btn-lg px-4">Blog</button></a>
         </div>
       </div>
     </div>
