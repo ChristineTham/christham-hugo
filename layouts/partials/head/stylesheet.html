@@ -9,10 +9,13 @@
   <link rel="stylesheet" href="{{ $secureCSS.Permalink }}" integrity="{{ $secureCSS.Data.Integrity }}" crossorigin="anonymous">
 {{ end -}}
 {{- if .HasShortcode "openstreetmap" -}}
-<link rel="stylesheet" href="/js/vendor/leaflet/dist/leaflet.css">
+  {{ $leaflet := resources.Get "js/vendor/leaflet/leaflet.css" | minify| fingerprint "sha512" -}}
+  <link rel="stylesheet" href="{{ $leaflet.Permalink }}" integrity="{{ $leaflet.Data.Integrity }}" crossorigin="anonymous">
 {{- end -}}
 {{- if .HasShortcode "gallery" -}}
-  <link rel="stylesheet" href="/js/vendor/photoswipe/photoswipe.css">
-  <link rel="stylesheet" href="/js/vendor/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css">
+  {{ $photoswipe := resources.Get "js/vendor/photoswipe/photoswipe.css" | minify | fingerprint "sha512" -}}
+  <link rel="stylesheet" href="{{ $photoswipe.Permalink }}" integrity="{{ $photoswipe.Data.Integrity }}" crossorigin="anonymous">
+  {{ $pdcp := resources.Get "js/vendor/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css" | minify | fingerprint "sha512" -}}
+  <link rel="stylesheet" href="{{ $pdcp.Permalink }}" integrity="{{ $pdcp.Data.Integrity }}" crossorigin="anonymous">
 {{- end -}}
 <noscript><style>img.lazyload { display: none; }</style></noscript>

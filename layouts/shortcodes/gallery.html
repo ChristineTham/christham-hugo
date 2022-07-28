@@ -18,14 +18,17 @@
 {{ end }}
 </div>
 <script type="module">
-import PhotoSwipeLightbox from '/js/vendor/photoswipe/photoswipe-lightbox.esm.js';
-import PhotoSwipeDynamicCaption from '/js/vendor/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.esm.js';
+{{ $lightbox := resources.Get "js/vendor/photoswipe/photoswipe-lightbox.esm.js" | minify -}}
+{{ $photoswipe := resources.Get "js/vendor/photoswipe/photoswipe.esm.js" | minify -}}
+{{ $pdcp := resources.Get "js/vendor/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.esm.js" | minify -}}
+import PhotoSwipeLightbox from '{{ $lightbox.RelPermalink }}';
+import PhotoSwipeDynamicCaption from '{{ $pdcp.RelPermalink }}';
 
 const lightbox = new PhotoSwipeLightbox({
   mainClass: 'pswp--custom-icon-colors',
   gallerySelector: '#gallery',
   childSelector: 'a',
-  pswpModule: () => import('/js/vendor/photoswipe/photoswipe.esm.js'),
+  pswpModule: () => import('{{ $photoswipe.RelPermalink }}'),
   paddingFn: (viewportSize) => {
     return {
       top: 0, bottom: 30, left: 0, right: 0
