@@ -2,7 +2,6 @@
 <style>
 #map { height: 400px; }
 </style>
-<script src="/js/vendor/leaflet/dist/leaflet.js"></script>
 <script>
   var loc = [{{- float (.Get "latitude") -}}, {{- float (.Get "longitude") -}}];
   var zoom = {{- int (.Get "zoom") -}};

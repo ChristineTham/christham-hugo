@@ -110,8 +110,8 @@ rel  = "sitemap"
     source = "node_modules/@hyas/images/layouts"
     target = "layouts"
   [[module.mounts]]
-    source = "node_modules/leaflet/dist"
-    target = "assets/js/vendor/leaflet"
+    source = "node_modules/leaflet"
+    target = "static/js/vendor/leaflet/dist"
   [[module.mounts]]
     source = "node_modules/photoswipe/dist"
     target = "assets/js/vendor/photoswipe"

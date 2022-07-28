@@ -9,8 +9,7 @@
   <link rel="stylesheet" href="{{ $secureCSS.Permalink }}" integrity="{{ $secureCSS.Data.Integrity }}" crossorigin="anonymous">
 {{ end -}}
 {{- if .HasShortcode "openstreetmap" -}}
-  {{ $leaflet := resources.Get "js/vendor/leaflet/leaflet.css" | minify| fingerprint "sha512" -}}
-  <link rel="stylesheet" href="{{ $leaflet.Permalink }}" integrity="{{ $leaflet.Data.Integrity }}" crossorigin="anonymous">
+  <link rel="stylesheet" href="/js/vendor/leaflet/dist/leaflet.css">
 {{- end -}}
 {{- if .HasShortcode "gallery" -}}
   {{ $photoswipe := resources.Get "js/vendor/photoswipe/photoswipe.css" | minify | fingerprint "sha512" -}}
