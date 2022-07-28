@@ -1,0 +1,16 @@
+<p><i><small>Please click on any photo to view full screen.</small></i></p>
+<div id="gallery" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
+{{- range (.Page.Resources.Match (printf "%s*" (.Get "folder"))) }}
+  {{ $thumbnail := .Resize "600x" }}
+  {{ $title := path.Base .Title | strings.TrimSuffix ".jpeg" }}
+  <figure itemscope itemtype="http://schema.org/ImageObject" class="image gallery-item">
+  <a href="{{ .Permalink }}" itemprop="contentUrl" data-pswp-width="{{ .Width }}" data-pswp-height="{{ .Height }}">
+    <img src="{{ $thumbnail.Permalink }}" itemprop="thumbnail" alt="galleryImage" class="galleryImage" />
+  </a>
+  <figcaption itemprop="caption description">
+    {{ $title }}
+    {{/*  <span itemprop="camera">{{ with .Exif.Tags.Model }} ({{ . }}){{ end }}</span>  */}}
+  </figcaption>
+  </figure>
+{{ end }}
+</div>
