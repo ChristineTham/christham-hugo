@@ -6,6 +6,6 @@
   {{ $alertInit := resources.Get "js/alert-init.js" | js.Build | minify -}}
   <script>{{ $alertInit.Content | safeJS }}</script>
 {{- end -}}
-{{ if .HasShortcode "openstreetmap" -}}
-  <script src="/js/vendor/leaflet/dist/leaflet.js"></script>
+{{ if .HasShortcode "map" -}}
+  <script src="/js/vendor/leaflet/leaflet.js"></script>
 {{ end -}}

@@ -8,8 +8,8 @@
   {{ $secureCSS := $css | resources.Fingerprint "sha512" -}}
   <link rel="stylesheet" href="{{ $secureCSS.Permalink }}" integrity="{{ $secureCSS.Data.Integrity }}" crossorigin="anonymous">
 {{ end -}}
-{{- if .HasShortcode "openstreetmap" -}}
-  <link rel="stylesheet" href="/js/vendor/leaflet/dist/leaflet.css">
+{{- if .HasShortcode "map" -}}
+  <link rel="stylesheet" href="/js/vendor/leaflet/leaflet.css">
 {{- end -}}
 {{- if .HasShortcode "gallery" -}}
   {{ $photoswipe := resources.Get "js/vendor/photoswipe/photoswipe.css" | minify | fingerprint "sha512" -}}
