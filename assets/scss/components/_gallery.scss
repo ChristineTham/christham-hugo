@@ -44,3 +44,22 @@
   margin: 0 0 0.2rem;
   width: auto;
 }
+
+.pswp--custom-icon-colors {
+  --pswp-icon-color: $rosely5;
+  --pswp-icon-color-secondary: $rosely8;
+}
+
+.pswp__dynamic-caption--aside {
+  max-width: 300px;
+  padding: 20px 15px 20px 20px;
+  margin-top: 70px;
+}
+.pswp__dynamic-caption--below {
+  max-width: 700px;
+  padding: 15px 0 0;
+}
+.pswp__dynamic-caption--mobile {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+}

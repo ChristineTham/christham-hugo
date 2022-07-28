@@ -115,3 +115,6 @@ rel  = "sitemap"
   [[module.mounts]]
     source = "node_modules/photoswipe/dist"
     target = "static/js/vendor/photoswipe"
+  [[module.mounts]]
+    source = "node_modules/photoswipe-dynamic-caption-plugin"
+    target = "static/js/vendor/photoswipe-dynamic-caption-plugin"

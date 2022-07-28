@@ -5,9 +5,9 @@
   {{ $title := path.Base .Title | strings.TrimSuffix ".jpeg" }}
   <figure itemscope itemtype="http://schema.org/ImageObject" class="image gallery-item">
   <a href="{{ .Permalink }}" itemprop="contentUrl" data-pswp-width="{{ .Width }}" data-pswp-height="{{ .Height }}">
-    <img src="{{ $thumbnail.Permalink }}" itemprop="thumbnail" alt="galleryImage" class="galleryImage" />
+    <img src="{{ $thumbnail.Permalink }}" itemprop="thumbnail" alt="{{ $title }}" class="galleryImage" />
   </a>
-  <figcaption itemprop="caption description">
+  <figcaption itemprop="caption description" class="pswp-caption-content">
     {{ $title }}
     {{/*  <span itemprop="camera">{{ with .Exif.Tags.Model }} ({{ . }}){{ end }}</span>  */}}
   </figcaption>
@@ -15,11 +15,25 @@
 {{ end }}
 </div>
 <script type="module">
-  import PhotoSwipeLightbox from '/js/vendor/photoswipe/photoswipe-lightbox.esm.js';
-  const lightbox = new PhotoSwipeLightbox({
-    gallery: '#gallery',
-    children: 'a',
-    pswpModule: () => import('/js/vendor/photoswipe/photoswipe.esm.js')
-  });
-  lightbox.init();
+import PhotoSwipeLightbox from '/js/vendor/photoswipe/photoswipe-lightbox.esm.js';
+import PhotoSwipeDynamicCaption from '/js/vendor/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.esm.js';
+
+const lightbox = new PhotoSwipeLightbox({
+  mainClass: 'pswp--custom-icon-colors',
+  gallerySelector: '#gallery',
+  childSelector: 'a',
+  pswpModule: () => import('/js/vendor/photoswipe/photoswipe.esm.js'),
+  paddingFn: (viewportSize) => {
+    return {
+      top: 0, bottom: 30, left: 0, right: 0
+    }
+  },
+});
+
+const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
+  captionContent: '.pswp-caption-content',
+  type: 'below',
+});
+
+lightbox.init();
 </script>

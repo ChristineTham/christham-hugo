@@ -39,6 +39,7 @@ module.exports = {
           './node_modules/katex/dist/katex.css',
           './node_modules/leaflet/dist/leaflet.css',
           './node_modules/photoswipe/dist/photoswipe.css',
+          './node_modules/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css',
         ]),
       ],
     }),
