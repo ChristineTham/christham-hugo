@@ -117,3 +117,6 @@
     <script src="{{ $index.Permalink }}" integrity="{{ $index.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ end -}}
 {{ end -}}
+{{- if .HasShortcode "openstreetmap" -}}
+<script src="/js/vendor/leaflet/dist/leaflet.js"></script>
+{{- end -}}
