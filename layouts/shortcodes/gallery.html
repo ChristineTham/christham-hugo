@@ -6,10 +6,13 @@
   <figure itemscope itemtype="http://schema.org/ImageObject" class="image gallery-item">
   <a href="{{ .Permalink }}" itemprop="contentUrl" data-pswp-width="{{ .Width }}" data-pswp-height="{{ .Height }}">
     <img src="{{ $thumbnail.Permalink }}" itemprop="thumbnail" alt="{{ $title }}" class="galleryImage" />
+    <span class="pswp-caption-content">
+      {{ $title }}
+      <span>{{ with .Exif.Tags.Model }} ({{ . }}){{ end }}</span>
+    </span>
   </a>
-  <figcaption itemprop="caption description" class="pswp-caption-content">
+  <figcaption itemprop="caption description" >
     {{ $title }}
-    {{/*  <span itemprop="camera">{{ with .Exif.Tags.Model }} ({{ . }}){{ end }}</span>  */}}
   </figcaption>
   </figure>
 {{ end }}
