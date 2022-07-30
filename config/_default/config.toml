@@ -118,3 +118,9 @@ rel  = "sitemap"
   [[module.mounts]]
     source = "node_modules/photoswipe-dynamic-caption-plugin"
     target = "assets/js/vendor/photoswipe-dynamic-caption-plugin"
+  [[module.mounts]]
+    source = "node_modules/photoswipe-dynamic-caption-plugin"
+    target = "assets/js/vendor/photoswipe-dynamic-caption-plugin"
+  [[module.mounts]]
+    source = "node_modules/bootstrap-icons/icons"
+    target = "assets/icons/vendor/bootstrap"
