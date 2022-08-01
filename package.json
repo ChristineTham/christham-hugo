@@ -59,7 +59,7 @@
     "leaflet": "^1.8.0",
     "markdownlint-cli2": "^0.5.0",
     "netlify-plugin-submit-sitemap": "^0.4.0",
-    "node-fetch": "^3.2.9",
+    "node-fetch": "^3.2.10",
     "photoswipe": "^5.3.0",
     "photoswipe-dynamic-caption-plugin": "^1.2.4",
     "postcss": "^8.4.14",
