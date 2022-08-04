@@ -1,0 +1,7 @@
+{{ if .Params.categories -}}
+  <small>
+    {{ range $index, $category := .Params.categories -}}
+      <a class="btn btn-primary btn-sm" href="{{ "/categories/" | absURL }}{{ . | urlize }}/">{{ . }}</a>
+    {{ end -}}
+  </small>
+{{ end -}}

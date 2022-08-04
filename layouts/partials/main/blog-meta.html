@@ -1,2 +1,17 @@
+{{ $.Scratch.Set "size" "20" }}
+{{ $.Scratch.Delete "color" }}
 {{ $last := sub (len .Params.contributors) 1 }}
-<small>{{ if .Params.categories -}}{{ range $index, $category := .Params.categories -}}<a class="btn btn-primary btn-sm" href="{{ "/categories/" | absURL }}{{ . | urlize }}/">{{ . }}</a>{{ end -}}{{ end -}}&nbsp;{{ .PublishDate.Format "2006-01-02" }} | {{ if .Params.contributors -}}{{ range $index, $contributor := .Params.contributors }}{{ if gt $index 0 }}{{ if eq $index $last }} and {{ else }}, {{ end }}{{ end }}<a class="stretched-link position-relative" href="{{ "/contributors/" | relURL }}{{ . | urlize }}/">{{ . }}</a>{{ end -}}{{ end -}}&nbsp;&hyphen;&nbsp;<strong>{{ .ReadingTime -}}&nbsp;min read</strong></small>
+<small>
+  {{ $.Scratch.Set "icon" "calendar-event" }}
+  {{ partial "content/icon.html" $ }}
+  {{ .PublishDate.Format "2006-01-02" }}
+  {{ if .Params.contributors -}}
+    {{ $.Scratch.Set "icon" "person" }}
+    {{ partial "content/icon.html" $ }}
+    {{ range $index, $contributor := .Params.contributors }}
+    {{ if gt $index 0 }}{{ if eq $index $last }} and {{ else }}, {{ end }}{{ end }}
+    <a class="stretched-link position-relative" href="{{ "/contributors/" | relURL }}{{ . | urlize }}/">{{ . }}</a>{{ end -}}{{ end -}}
+    {{ $.Scratch.Set "icon" "stopwatch" }}
+    {{ partial "content/icon.html" $ }}
+    {{ .ReadingTime -}}&nbsp;min
+</small>
