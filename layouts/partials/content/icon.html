@@ -1,9 +1,13 @@
 {{ $icon := .Scratch.Get "icon" }}
 {{ $size := .Scratch.Get "size" }}
+{{ $color := .Scratch.Get "color" }}
 {{ $svg := resources.Get (printf "icons/vendor/bootstrap/%s.svg" $icon) }}
 {{ $out := $svg.Content }}
 {{ if $size }}
   {{ $out = replaceRE "width=\"[0-9]+\"" (printf "width=\"%s\"" $size) $out 1 }}
   {{ $out = replaceRE "height=\"[0-9]+\"" (printf "height=\"%s\"" $size) $out 1 }}
+{{ end }}
+{{ if $color }}
+  {{ $out = replaceRE "class=\"" (printf "class=\"text-%s " $color) $out 1 }}
 {{ end }}
 {{ return safeHTML $out }}
