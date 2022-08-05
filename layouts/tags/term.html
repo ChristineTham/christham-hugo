@@ -19,24 +19,6 @@
       {{ .Content }}
     </div>
   </div>
-  <div class="row">
-    {{ $paginator := .Paginate (.Data.Pages) -}}
-    {{ range $paginator.Pages -}}
-      <div class="col-lg-4 col-md-12 mb-4">
-        <div class="card">
-          <div class="card-header">{{ partial "main/blog-categories.html" . }}</div>
-          {{- .Scratch.Set "fillImageCard" "600x400 Center" -}}
-          {{ partial "content/card-image.html" . }}
-          <div class="card-body">
-            <h2 class="h5 card-title"><a class="stretched-link" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
-            <p class="card-text">{{ .Params.description | safeHTML }}</p>
-          </div>
-          <div class="card-footer">{{ partial "main/blog-meta.html" . -}}</div>
-        </div>
-      </div>
-    {{ end -}}
-    {{ $.Scratch.Set "paginator" true }}
-    {{ template "_internal/pagination.html" . }}
-  </div>
+  {{ partial "main/blog-list.html" . }}
 </article>
 {{ end }}
