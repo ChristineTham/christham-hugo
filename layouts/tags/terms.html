@@ -1,0 +1,37 @@
+{{ define "main" }}
+<style>
+  #intro {
+    height: 33vh;
+    background-color: #f7caca;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h16v2h-6v6h6v8H8v-6H2v6H0V0zm4 4h2v2H4V4zm8 8h2v2h-2v-2zm-8 0h2v2H4v-2zm8-8h2v2h-2V4z' fill='%23ec809e' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+</style>
+<article>
+  {{ .Scratch.Set "icon" "tags-fill" }}
+  {{ .Scratch.Set "size" "100" }}
+  {{ .Scratch.Set "color" "primary" }}
+  {{ .Scratch.Set "class" "d-block mx-auto" }}
+  <div id="intro" class="px-4 py-5 text-center text-black">
+    {{ partial "content/icon.html" $ }}
+    <h1 class="display-5 fw-bold">{{ .Title }}</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">{{ .Description }}</p>
+      {{ .Content }}
+    </div>
+  </div>
+  <div class="container-fluid">
+   <div class="d-flex flex-row justify-content-center">
+    {{ range .Data.Terms.ByCount }}
+      <div class="">
+          <a href="{{ .Page.Permalink }}"
+              style="font-size:  {{ mul 16 .Count }}px;"
+              class="m-3 btn btn-outline-primary">
+              {{ .Page.Title }}
+              <span class="badge text-bg-secondary mx-1">{{ .Count }}</span>
+          </a>
+      </div>
+    {{ end }}
+  </div>
+ </div>
+</article>
+{{ end }}

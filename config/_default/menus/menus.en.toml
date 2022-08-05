@@ -14,6 +14,16 @@
   url = "/blog/"
   weight = 20
 
+[[main]]
+  name = "Categories"
+  url = "/categories/"
+  weight = 30
+
+[[main]]
+  name = "Tags"
+  url = "/tags/"
+  weight = 40
+
 [[social]]
   name = "GitHub"
   identifier = "github"
