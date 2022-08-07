@@ -25,18 +25,24 @@
     </div>
   </div>
   {{ .Scratch.Set "icon" "briefcase" }}
-  {{ .Scratch.Set "size" "72" }}
+  {{ .Scratch.Set "size" "100" }}
   {{ .Scratch.Set "color" "primary" }}
-  {{ .Scratch.Set "class" "card-img-top" }}
+  {{ .Scratch.Delete "class"}}
   <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-4">
     {{ range .Data.Terms.Alphabetical }}
       <div class="col">
-        <a href="{{ .Page.Permalink }}" class="card">
+        <a href="{{ .Page.Permalink }}" class="card text-center">
           <div class="card-header text-center">
-            <span class="h4">{{ .Page.Title }}</span>
+            <span class="h5">{{ .Page.Title }}</span>
             <span class="badge text-bg-secondary mx-1">{{ .Count }}</span>
           </div>
-          {{ partial "content/icon.html" $ }}
+          <div class="card-body">
+            {{ if .Page.Params.icon }}
+            {{ (resources.Get .Page.Params.icon).Content | replaceRE "width=\"[^\"]+\"" "width=\"100\"" | replaceRE "height=\"[^\"]+\"" "height=\"100\"" | safeHTML }}
+            {{ else }}
+            {{ partial "content/icon.html" $ }}
+            {{ end }}
+          </div>
         </a>
       </div>
     {{ end }}

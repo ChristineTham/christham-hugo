@@ -11,6 +11,7 @@ This is a version of my personal blog/web site written in Markdown and [Hugo](ht
 - Use [Bootstrap Icons](https://icons.getbootstrap.com/)
 - Taxonomy pages
 - Soundcloud embeds via [hugo-shortcodes-soundcloud](https://github.com/yuma-m/hugo-shortcodes-soundcloud)
+- Category icons based on [Kawaii Flat icons](https://www.flaticon.com/authors/kawaii/flat) created by Freepik - Flaticon
 
 It is hosted on [Github Pages](https://pages.github.com) and deployed via Github Action workflow.
 

@@ -12,13 +12,18 @@
   {{ .Scratch.Set "color" "primary" }}
   {{ .Scratch.Set "class" "d-block mx-auto" }}
   <div id="intro" class="px-4 py-5 text-center text-black">
+    {{ if .Params.icon }}
+    {{ (resources.Get .Params.icon).Content | replaceRE "width=\"[^\"]+\"" "width=\"100\"" | replaceRE "height=\"[^\"]+\"" "height=\"100\"" | safeHTML }}
+    {{ else }}
     {{ partial "content/icon.html" $ }}
+    {{ end }}
     <h1 class="display-5 fw-bold">{{ .Title }}</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">{{ .Description }}</p>
-      {{ .Content }}
-    </div>
   </div>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead mb-4">{{ .Description }}</p>
+    {{ .Content }}
+  </div>
+  <ul>
   {{ partial "main/blog-list.html" . }}
 </article>
 {{ end }}
