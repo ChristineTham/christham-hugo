@@ -10,6 +10,7 @@ This is a version of my personal blog/web site written in Markdown and [Hugo](ht
 - Photo Gallery shortcode using CSS based masonry and [PhotoSwipe](https://photoswipe.com), inspired by [Creating a Gallery Component for the Hugo Static Site Generator](https://brunoamaral.eu/post/creating-a-gallery-component-for-the-hugo-static-site-generator/) but updated for PhotoSwipe v5
 - Use [Bootstrap Icons](https://icons.getbootstrap.com/)
 - Taxonomy pages
+- Soundcloud embeds via [hugo-shortcodes-soundcloud](https://github.com/yuma-m/hugo-shortcodes-soundcloud)
 
 It is hosted on [Github Pages](https://pages.github.com) and deployed via Github Action workflow.
 

@@ -45,7 +45,7 @@ The following is taken from an epitaph erected by The N.S. Tham Clansmen Associa
 
 ## Jalan Kapitan Tam Yeong
 
-Today, there is a street named after my great grandfather. Jalan Kapitan Tam Yeong is a road on the northern part of downtown Seremban. It connects Jalan Tun Dr Ismail to Jalan Leftenan Adnan. In between, it also forms junctions with Jalan Dato Bandar Tunggal, Jalan Seng Meng Lee and Jalan Yam Tuan.
+Today, there is a street named after my great grandfather. Jalan Kapitan Tam Yeong is a road on the northern part of downtown Seremban (formerly part of Murray St). It connects Jalan Tun Dr Ismail to Jalan Leftenan Adnan. In between, it also forms junctions with Jalan Dato Bandar Tunggal, Jalan Seng Meng Lee and Jalan Yam Tuan.
 
 {{< map latitude="2.72986" longitude="101.93829" zoom="18" >}}
 

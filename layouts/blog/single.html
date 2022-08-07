@@ -6,14 +6,17 @@
       {{ partial "main/blog-categories.html" . }}
       <h1>{{ .Title }}</h1>
       {{ partial "main/blog-meta.html" . }}
+      <p class="h5"><i>{{ .Params.lead }}</i></p>
     </div>
   </div>
+  {{ if (and .Params.images (not .Params.skip_featured_image)) }}
   <div class="col-md-10">
     <div>
       {{- .Scratch.Set "fillImage" "2540x1430 Center" -}}
       {{ partial "content/figure.html" . }}
     </div>
   </div>
+  {{ end }}
   <div class="col-md-10 col-lg-8">
     {{ .Content }}
     {{ if .Params.tags -}}
