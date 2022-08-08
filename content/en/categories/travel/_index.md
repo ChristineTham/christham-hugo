@@ -1,7 +1,7 @@
 ---
 title: "Travel"
 description: I love traveling.
-icon: "icons/kawaii/002-map.svg"
+icon: "002-map"
 kind: term
 ---
 

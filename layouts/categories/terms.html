@@ -12,7 +12,7 @@
   }
 </style>
 <article>
-  {{ .Scratch.Set "icon" "bookmarks-fill" }}
+  {{ .Scratch.Set "icon" "vendor/bootstrap/bookmarks-fill" }}
   {{ .Scratch.Set "size" "100" }}
   {{ .Scratch.Set "color" "primary" }}
   {{ .Scratch.Set "class" "d-block mx-auto" }}
@@ -24,12 +24,16 @@
       {{ .Content }}
     </div>
   </div>
-  {{ .Scratch.Set "icon" "briefcase" }}
   {{ .Scratch.Set "size" "100" }}
   {{ .Scratch.Set "color" "primary" }}
   {{ .Scratch.Delete "class"}}
   <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-4">
     {{ range .Data.Terms.Alphabetical }}
+      {{ if .Page.Params.icon }}
+        {{ $.Scratch.Set "icon" (printf "kawaii/%s" .Page.Params.icon) }}
+      {{ else }}
+        {{ $.Scratch.Set "icon" "vendor/bootstrap/briefcase" }}
+      {{ end }}
       <div class="col">
         <a href="{{ .Page.Permalink }}" class="card text-center">
           <div class="card-header text-center">
@@ -37,11 +41,7 @@
             <span class="badge text-bg-secondary mx-1">{{ .Count }}</span>
           </div>
           <div class="card-body">
-            {{ if .Page.Params.icon }}
-            {{ (resources.Get .Page.Params.icon).Content | replaceRE "width=\"[^\"]+\"" "width=\"100\"" | replaceRE "height=\"[^\"]+\"" "height=\"100\"" | safeHTML }}
-            {{ else }}
             {{ partial "content/icon.html" $ }}
-            {{ end }}
           </div>
         </a>
       </div>

@@ -98,7 +98,7 @@
         <hr class="text-black-50 my-4 d-lg-none">
         <ul class="nav flex-column flex-lg-row">
           {{ range .Site.Menus.social -}}
-            {{ $.Scratch.Set "icon" .Identifier }}
+            {{ $.Scratch.Set "icon" (printf "vendor/bootstrap/%s" .Identifier) }}
             <li class="nav-item">
               <a class="nav-link social-link text-primary" href="{{ .URL | relURL }}">
                 {{ partial "content/icon.html" $ }}
@@ -112,11 +112,11 @@
         <hr class="text-black-50 my-4 d-lg-none">
         <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
           <span class="toggle-dark">
-            {{ $.Scratch.Set "icon" "moon" }}
+            {{ $.Scratch.Set "icon" "vendor/bootstrap/moon" }}
             {{ partial "content/icon.html" $ }}
           </span>
           <span class="toggle-light">
-            {{ $.Scratch.Set "icon" "moon-fill" }}
+            {{ $.Scratch.Set "icon" "vendor/bootstrap/moon-fill" }}
             {{ partial "content/icon.html" $ }}
           </span>
         </button>

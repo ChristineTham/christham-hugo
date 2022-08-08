@@ -2,11 +2,11 @@
 {{ $size := .Scratch.Get "size" }}
 {{ $color := .Scratch.Get "color" }}
 {{ $class := .Scratch.Get "class" }}
-{{ $svg := resources.Get (printf "icons/vendor/bootstrap/%s.svg" $icon) }}
+{{ $svg := resources.Get (printf "icons/%s.svg" $icon) }}
 {{ $out := $svg.Content }}
 {{ if $size }}
-  {{ $out = replaceRE "width=\"[0-9]+\"" (printf "width=\"%s\"" $size) $out 1 }}
-  {{ $out = replaceRE "height=\"[0-9]+\"" (printf "height=\"%s\"" $size) $out 1 }}
+  {{ $out = replaceRE "width=\"[^\"]+\"" (printf "width=\"%s\"" $size) $out 1 }}
+  {{ $out = replaceRE "height=\"[^\"]+\"" (printf "height=\"%s\"" $size) $out 1 }}
 {{ end }}
 {{ if $color }}
   {{ $out = replaceRE "class=\"" (printf "class=\"text-%s " $color) $out 1 }}

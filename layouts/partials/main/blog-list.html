@@ -1,21 +1,21 @@
-<div class="row gx-5" data-masonry='{"percentPosition": true }' >
+<div class="row gy-4">
   {{ $paginator := .Paginate (.Data.Pages) -}}
-  {{ range $paginator.Pages -}}
-    <div class="col-lg-4 col-md-12">
-      <div class="card">
-        <div class="card-header">{{ partial "main/blog-categories.html" . }}</div>
-        {{- .Scratch.Set "fillImageCard" "600x400 Center" -}}
-        {{ partial "content/card-image.html" . }}
-        <div class="card-body">
-          <h2 class="h4 card-title"><a class="stretched-link" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
-          <p class="card-text">{{ .Params.description | safeHTML }}</p>
+    {{ range $paginator.Pages -}}
+      <div class="col-lg-4 col-md-12">
+        <div class="card h-100">
+          <div class="card-header">{{ partial "main/blog-categories.html" . }}</div>
+          {{- .Scratch.Set "fillImageCard" "600x400 Center" -}}
+          {{ partial "content/card-image.html" . }}
+          <div class="card-body">
+            <h2 class="h4 card-title"><a class="stretched-link" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
+            <p class="card-text">{{ .Params.description | safeHTML }}</p>
+          </div>
+          <div class="card-footer">{{ partial "main/blog-meta.html" . -}}</div>
         </div>
-        <div class="card-footer">{{ partial "main/blog-meta.html" . -}}</div>
       </div>
-    </div>
-  {{ end -}}
+    {{ end -}}
 </div>
-<div class="justify-content-center" style="display:flex">
+<div class="justify-content-center mt-5" style="display:flex">
   <div class="row justify-content-center" >
     <div class="col-md-10 col-lg-8">
       {{ $.Scratch.Set "paginator" true }}
@@ -23,4 +23,3 @@
     </div>
   </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>

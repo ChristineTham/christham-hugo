@@ -1,7 +1,7 @@
 ---
 title: "Design"
 description: This page contains a selection of things I have designed.
-icon: "icons/kawaii/001-love.svg"
+icon: "001-love"
 kind: term
 ---
 I love good design, whether it’s a product, clothes, personal accessories or even design as art. I generally like design to be simple, functional, classic, but not necessarily tradition.
