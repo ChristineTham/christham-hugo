@@ -24,26 +24,24 @@
       {{ .Content }}
     </div>
   </div>
-  {{ .Scratch.Set "size" "100" }}
+  {{ .Scratch.Set "size" "100%" }}
   {{ .Scratch.Set "color" "primary" }}
-  {{ .Scratch.Delete "class"}}
-  <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-4">
+  {{ .Scratch.Set "class" "card-img-top" }}
+  <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6">
     {{ range .Data.Terms.Alphabetical }}
       {{ if .Page.Params.icon }}
         {{ $.Scratch.Set "icon" (printf "kawaii/%s" .Page.Params.icon) }}
       {{ else }}
-        {{ $.Scratch.Set "icon" "vendor/bootstrap/briefcase" }}
+        {{ $.Scratch.Set "icon" "kawaii/010-notebook" }}
       {{ end }}
       <div class="col">
-        <a href="{{ .Page.Permalink }}" class="card text-center">
-          <div class="card-header text-center">
-            <span class="h5">{{ .Page.Title }}</span>
+        <div class="card">
+          {{ partial "content/icon.html" $ }}
+          <div class="card-body text-center">
+            <span class="h5 card-title"><a class="stretched-link" href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></span>
             <span class="badge text-bg-secondary mx-1">{{ .Count }}</span>
           </div>
-          <div class="card-body">
-            {{ partial "content/icon.html" $ }}
-          </div>
-        </a>
+        </div>
       </div>
     {{ end }}
   </div>

@@ -7,7 +7,7 @@ draft: false
 images: []
 ---
 
-__TLDR__: We do not use cookies and we do not collect any personal data. I respect your privacy &#8211; I will not monetise your data, and I hope you will do the same for me.
+__TLDR__: I do not use cookies and I do not collect any personal data.
 
 ## Website visitors
 
@@ -20,7 +20,13 @@ __TLDR__: We do not use cookies and we do not collect any personal data. I respe
 
 ### Information we collect and what we use it for
 
-This site is hosted on [GitHub Pages](https://pages.github.com). Please note that GitHub may collect Technical Information from visitors to this website, including logs of visitor IP addresses, to maintain the security and integrity of the website and service.
+This site is hosted on [GitHub Pages](https://pages.github.com). Although I do not collect any information, please note that GitHub may collect Technical Information from visitors to this website, including logs of visitor IP addresses, to maintain the security and integrity of the website and service.
+
+Extract from GitHub privacy statement:
+
+>If you're accessing or using our Service, we may automatically collect information about how you use the Service, such as the pages you view, the referring site, your IP address and information about your device, session information, the date and time of each request, information contained in or relating to your contributions to individual repositories, and telemetry data (i.e., information about how a specific feature or service is performing) regarding your use of other features and functionality of the Service.
+
+Some content on this website may link to external websites, such as Facebook, YouTube, Vimeo, Soundcloud etc. When you click a link to any external website, you will be subject to the data collection policies of those websites, which I have no control over.
 
 ## Contact us
 

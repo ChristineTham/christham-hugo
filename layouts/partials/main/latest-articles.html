@@ -1,0 +1,11 @@
+<section>
+  <div class="container-fluid">
+    <h2 class="display-6 fw-bold lh-1 text-center">Recent Articles</h1>
+    <p class="lead text-center">To view all articles, click <a href="/blog">here</a></p>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5">
+  {{ range ( first 3 ( where .Site.Pages "Type" "blog" ).ByDate ) }}
+    {{ partial "main/blog-card.html" . }}
+  {{ end -}}
+  </div>
+</section>

@@ -1,0 +1,12 @@
+<div class="col">
+  <div class="card h-100">
+    <div class="card-header">{{ partial "main/blog-categories.html" . }}</div>
+    {{- .Scratch.Set "fillImageCard" "600x400 Center" -}}
+    {{ partial "content/card-image.html" . }}
+    <div class="card-body">
+      <h2 class="h4 card-title"><a class="stretched-link" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
+      <p class="card-text">{{ .Params.description | safeHTML }}</p>
+    </div>
+    <div class="card-footer">{{ partial "main/blog-meta.html" . -}}</div>
+  </div>
+</div>

@@ -4,6 +4,18 @@
 {{ $class := .Scratch.Get "class" }}
 {{ $svg := resources.Get (printf "icons/%s.svg" $icon) }}
 {{ $out := $svg.Content }}
+{{ if not (in $out "height=\"") }}
+  {{ $out = replaceRE "<svg " "<svg height=\"16" $out 1 }}
+{{ end }}
+{{ if not (in $out "width=\"") }}
+  {{ $out = replaceRE "<svg " "<svg width=\"16" $out 1 }}
+{{ end }}
+{{ if not (in $out "class=\"") }}
+  {{ $out = replaceRE "<svg " "<svg class=\"\"" $out 1 }}
+{{ end }}
+{{ if not (in $out "class=\"") }}
+  {{ $out = replaceRE "<svg " "<svg class=\"\"" $out 1 }}
+{{ end }}
 {{ if $size }}
   {{ $out = replaceRE "width=\"[^\"]+\"" (printf "width=\"%s\"" $size) $out 1 }}
   {{ $out = replaceRE "height=\"[^\"]+\"" (printf "height=\"%s\"" $size) $out 1 }}
