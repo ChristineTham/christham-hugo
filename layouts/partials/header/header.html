@@ -15,6 +15,10 @@
   <nav class="container-{{ if .Site.Params.options.fullWidth }}fluid{{ else }}xxl{{ end }} flex-wrap flex-lg-nowrap" aria-label="Main navigation">
 
     <a class="navbar-brand order-0 text-primary" href="{{ "/" | relLangURL }}" aria-label="{{ .Site.Params.Title }}">
+      {{ .Scratch.Set "icon" "logo" }}
+      {{ .Scratch.Set "size" "32" }}
+      {{ partial "content/icon.html" . }}
+      {{ .Scratch.Set "size" "24" }}
       {{ .Site.Params.Title }}
     </a>
 

@@ -10,7 +10,7 @@
   {{ if .Page.Params.icon }}
     {{ .Scratch.Set "icon" (printf "kawaii/%s" .Page.Params.icon) }}
   {{ else }}
-    {{ .Scratch.Set "icon" "vendor/bootstrap/bookmark-fill" }}
+    {{ .Scratch.Set "icon" "kawaii/notebook" }}
   {{ end }}
   {{ .Scratch.Set "size" "100" }}
   {{ .Scratch.Set "color" "primary" }}
