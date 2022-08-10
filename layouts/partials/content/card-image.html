@@ -4,6 +4,13 @@
 {{ end -}}
 
 {{ $image := resources.Get (printf "%s%s" "images/" site.Params.defaultImage) }}
+{{ range .Params.categories }}
+  {{ with $.Site.GetPage (printf "/categories/%s" (urlize .)) }}
+    {{ with .Params.defaultImage }}
+      {{ $image = resources.Get (printf "images/undraw/%s.png" .) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 {{ if .Params.images }}
 {{ $image = .Resources.GetMatch (printf "**%s" (index .Params.images 0)) }}
 {{ end -}}

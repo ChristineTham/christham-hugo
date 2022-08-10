@@ -21,8 +21,8 @@
     {{ .Content }}
     {{ if .Params.tags -}}
     <div class="mt-4">
-      {{ range $index, $tag := .Params.tags -}}
-        <a class="btn btn-outline-primary" href="{{ "/tags/" | absURL }}{{ . | urlize }}/" role="button">{{ . }}</a>
+      {{ range (.GetTerms "tags") -}}
+        <a class="btn btn-outline-primary" href="{{ .Permalink }}" role="button">{{ .LinkTitle }}</a>
       {{ end -}}
     </div>
     {{ end -}}

@@ -2,6 +2,7 @@
 title: "Music"
 description: I love listening, playing and composing music.
 icon: "turntable"
+defaultImage: "music"
 kind: term
 ---
 My interests in music are broad, ranging from classical, jazz, contemporary to modern. My favourite composer of all time is probably Johann Sebastian Bach, but I also like many of the other classical composers. I listen to mostly Puccini and Wagner operas. In terms of jazz, I love Pat Metheny and Keith Jarrett. I also love electronic music, particularly Vangelis, Tangerine Dream and Jean Michel Jarre. My favourite minimalist composers are Brian Eno, Philip Glass, Steve Reich and John Adams. I listen to range of modern artists including Mike Oldfield, Pet Shop Boys, Madonna, Phil Collins.

@@ -2,6 +2,7 @@
 title: "Design"
 description: This page contains a selection of things I have designed.
 icon: "love"
+defaultImage: "building_websites"
 kind: term
 ---
 I love good design, whether it’s a product, clothes, personal accessories or even design as art. I generally like design to be simple, functional, classic, but not necessarily tradition.

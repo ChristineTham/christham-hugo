@@ -1,6 +1,8 @@
 <div class="col">
   <div class="card h-100">
+    {{ if .Params.categories }}
     <div class="card-header">{{ partial "main/blog-categories.html" . }}</div>
+    {{ end }}
     {{- .Scratch.Set "fillImageCard" "600x400 Center" -}}
     {{ partial "content/card-image.html" . }}
     <div class="card-body">
