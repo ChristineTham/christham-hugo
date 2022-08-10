@@ -1,5 +1,4 @@
-{{ $.Scratch.Set "size" "20" }}
-{{ $.Scratch.Set "color" "primary" }}
+
 
 {{ if .Site.Params.alert -}}
   {{ partial "header/alert.html" . }}
@@ -14,12 +13,11 @@
 <header class="navbar navbar-expand-lg navbar-light doks-navbar">
   <nav class="container-{{ if .Site.Params.options.fullWidth }}fluid{{ else }}xxl{{ end }} flex-wrap flex-lg-nowrap" aria-label="Main navigation">
 
-    <a class="navbar-brand order-0 text-primary" href="{{ "/" | relLangURL }}" aria-label="{{ .Site.Params.Title }}">
+    <a class="navbar-brand order-0 text-primary d-flex align-items-center" href="{{ "/" | relLangURL }}" aria-label="{{ .Site.Params.Title }}">
       {{ .Scratch.Set "icon" "logo" }}
       {{ .Scratch.Set "size" "32" }}
       {{ partial "content/icon.html" . }}
-      {{ .Scratch.Set "size" "24" }}
-      {{ .Site.Params.Title }}
+      <span class="ms-1">{{ .Site.Params.Title }}</span>
     </a>
 
     {{ if (in .Site.Params.sections.sectionNav .Section) -}}
@@ -99,6 +97,9 @@
         </form>
         {{ end -}}
 
+        {{ .Scratch.Set "size" "20" }}
+        {{ $.Scratch.Set "color" "primary" }}
+
         <hr class="text-black-50 my-4 d-lg-none">
         <ul class="nav flex-column flex-lg-row">
           {{ range .Site.Menus.social -}}
@@ -106,7 +107,7 @@
             <li class="nav-item">
               <a class="nav-link social-link text-primary" href="{{ .URL | relURL }}">
                 {{ partial "content/icon.html" $ }}
-                <small class="ms-2 d-lg-none">{{ .Name | safeHTML }}</small>
+                <small class="ms-1 d-lg-none">{{ .Name | safeHTML }}</small>
               </a>
             </li>
           {{ end -}}

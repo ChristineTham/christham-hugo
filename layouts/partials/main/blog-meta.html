@@ -1,13 +1,14 @@
-{{ $.Scratch.Set "size" "20" }}
+{{ $.Scratch.Set "size" "24" }}
 {{ $.Scratch.Set "class" "ms-2 me-1" }}
 {{ $.Scratch.Delete "color" }}
-<small>
+<small class="d-flex align-items-center">
   {{ $.Scratch.Set "icon" "vendor/bootstrap/calendar-event" }}
   {{ partial "content/icon.html" $ }}
-  {{ .PublishDate.Format "2006-01-02" }}
+  <span class="ms-1 me-2">{{ .PublishDate.Format "2006-01-02" }}</span>
   {{ if .Params.contributors -}}
     {{ $last := sub (len .Params.contributors) 1 }}
     {{ $.Scratch.Set "icon" "vendor/bootstrap/person" }}
+    {{ $.Scratch.Set "class" "ms-2 me-1" }}
     {{ partial "content/icon.html" $ }}
     {{ range $index, $contributor := .Params.contributors }}
     {{ if gt $index 0 }}{{ if eq $index $last }} and {{ else }}, {{ end }}{{ end }}
