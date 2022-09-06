@@ -10,21 +10,21 @@
 
   .carousel-item:nth-child(1) {
     {{ $image := resources.Get "images/me/Mayfield Garden (107).jpeg" }}
-    background-image: url('{{ $image.RelPermalink }}');
+    background-image: url('{{ $image.Permalink }}');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
   }
   .carousel-item:nth-child(2) {
     {{ $image := resources.Get "images/me/Cowarra Dam (2).jpeg" }}
-    background-image: url('{{ $image.RelPermalink }}');
+    background-image: url('{{ $image.Permalink }}');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left top;
   }
   .carousel-item:nth-child(3) {
     {{ $image := resources.Get "images/me/Oberon Dam (13).jpeg" }}
-    background-image: url('{{ $image.RelPermalink }}');
+    background-image: url('{{ $image.Permalink }}');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
