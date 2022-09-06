@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://christinetham.github.io/christham-hugo/sitemap.xml
+Sitemap: https://christham.net/christham-hugo/sitemap.xml
