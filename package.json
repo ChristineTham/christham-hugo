@@ -60,7 +60,7 @@
     "markdownlint-cli2": "^0.6.0",
     "netlify-plugin-submit-sitemap": "^0.4.0",
     "node-fetch": "^3.3.0",
-    "photoswipe": "^5.3.5",
+    "photoswipe": "^5.3.7",
     "photoswipe-dynamic-caption-plugin": "^1.2.7",
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
