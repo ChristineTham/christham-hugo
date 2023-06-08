@@ -62,7 +62,7 @@
     "node-fetch": "^3.3.0",
     "photoswipe": "^5.3.5",
     "photoswipe-dynamic-caption-plugin": "^1.2.7",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.24",
     "postcss-cli": "^10.1.0",
     "purgecss-whitelister": "^2.4.0",
     "shx": "^0.3.4",
